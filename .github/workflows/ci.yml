@@ -1,0 +1,16 @@
+name: CI Simple
+
+on:
+  push:
+    branches:
+      - main  # Exécuter l’action sur chaque push dans la branche main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utiliser une machine Ubuntu
+    steps:
+      - name: Cloner le dépôt
+        uses: actions/checkout@v4  # Télécharge le code du repo
+
+      - name: Afficher un message
+        run: echo "🚀 GitHub Actions fonctionne !"
